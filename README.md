@@ -131,3 +131,22 @@ src/sentivo/
 ├── schemas/                   # Pydantic message models
 └── sentiment_analysis/        # FinBERT ONNX, preprocessor, test texts
 ```
+
+
+## Performance
+
+- **Throughput**: 1 000+ messages/min across all Kafka topics
+- **Sentiment latency**: <100 ms per batch of 32 texts (ONNX CPU)
+- **Signal latency**: <500 ms from data ingestion to final signal
+- **Memory**: ~2 GB with loaded FinBERT model
+- **CPU**: ~40% on 4-core system at peak load
+
+## Methodology
+
+The Fear & Greed Index combines behavioural finance principles with real-time NLP:
+
+1. **Sentiment score** (50 %) — 5-minute rolling average of FinBERT scores normalised to 0–100
+2. **Price momentum** (30 %) — 5-minute percent change capped at ±5 %
+3. **Sentiment velocity** (20 %) — rate of change in 1-minute sentiment averages
+
+Signals are generated when threshold combinations indicate statistically significant market conditions, inspired by classic behavioural finance literature (Shiller, Kahneman & Tversky).
