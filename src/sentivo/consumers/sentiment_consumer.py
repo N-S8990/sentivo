@@ -28,7 +28,7 @@ class SentimentConsumer(BaseConsumer):
         self.in_topic = "raw_text_data"
         self.out_topic = "analyzed_sentiment"
 
-        logger.info("Loading sentiment model (FinBERT ONNX) ...")
+        logger.info("Model loaded, starting inference loop ...")
         self.model = OnnxFinBert()
         self.preprocessor = TextPreprocessor()
 
