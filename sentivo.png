@@ -1,0 +1,15 @@
+Sentivo — Market Sentiment & Pulse Engine
+
+Data Flow:
+Reddit ──> RedditProducer ──┐
+                           ├── raw_text_data ──> SentimentConsumer
+NewsAPI ─> NewsProducer   ──┘
+yFinance > MarketDataProducer ──> raw_market_data
+                                        │
+                             analyzed_sentiment
+                                        │
+                          AggregatorConsumer ──> aggregated_metrics
+                                                       │
+                                            SignalConsumer ──> trade_signals
+                                                                    │
+                                                              LoggingSink
