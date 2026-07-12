@@ -10,11 +10,11 @@ assets:
     keywords: ["bitcoin", "btc"]
     reddit_subreddits: ["bitcoin", "btc", "CryptoCurrency"]
     news_queries: ["bitcoin", "crypto"]
-  # - name: "Ethereum"
-    # ticker: "ETH-USD"
-    # keywords: ["ethereum", "eth"]
-    # reddit_subreddits: ["ethereum", "eth"]
-    # news_queries: ["ethereum", "eth", "defi"]
+  - name: "Ethereum"
+    ticker: "ETH-USD"
+    keywords: ["ethereum", "eth"]
+    reddit_subreddits: ["ethereum", "eth"]
+    news_queries: ["ethereum", "eth", "defi"]
 
 general_news_keywords:
   - "stock market"
