@@ -1,6 +1,20 @@
 # Sentivo — Market Sentiment & Pulse Engine
 
-Real-time sentiment analysis and signal generation engine that aggregates social media, news, and market data into actionable Fear & Greed scores and trade signals.
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
+![Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?logo=apachekafka&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+![FinBERT](https://img.shields.io/badge/FinBERT-ONNX-FF6B35?logo=huggingface&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+> Real-time sentiment analysis and signal generation engine that aggregates social media, news, and market data into actionable Fear & Greed scores and trade signals.
+
+---
+
+## Demo
+
+Run the full pipeline with Docker Compose and see live sentiment scores, Fear & Greed index, and trade signals flowing through Kafka topics.
+
+---
 
 ## Architecture
 
@@ -22,6 +36,33 @@ yFinance ────> MarketDataProducer ──> raw_market_data ────�
 | `aggregated_metrics` | Fear & Greed Index (0–100) | AggregatorConsumer | SignalConsumer |
 | `trade_signals` | BUY / SELL / HOLD with confidence | SignalConsumer | LoggingSink |
 
+---
+
+## Features
+
+- **FinBERT ONNX** — sub-100ms sentiment analysis on CPU (batch of 32)
+- **Kafka streaming** — decoupled producers/consumers, 1000+ messages/min
+- **Fear & Greed Index** — weighted composite of sentiment, momentum, and velocity
+- **Signal strategies** — contrarian buy/sell and trend following with confidence scores
+- **Multi-source** — Reddit, NewsAPI, yFinance in a unified pipeline
+- **Configurable** — YAML-based asset targets and keywords
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Language | Python 3.11+ |
+| Streaming | Apache Kafka, Docker Compose |
+| NLP | FinBERT (ProsusAI/finbert), ONNX Runtime |
+| Data | yFinance, Reddit API, NewsAPI |
+| Validation | Pydantic |
+| Config | YAML (config/targets.yaml) |
+| Packaging | Poetry |
+
+---
+
 ## Quick Start
 
 ### Prerequisites
@@ -34,6 +75,7 @@ yFinance ────> MarketDataProducer ──> raw_market_data ────�
 
 ```bash
 # Clone & enter the project
+git clone https://github.com/N-S8990/sentivo.git
 cd sentivo
 poetry shell
 
@@ -77,6 +119,8 @@ Add these to `.env`:
 - `NEWSAPI_API_KEY` — [NewsAPI](https://newsapi.org/)
 - `TWITTER_*` — Optional, for Twitter/X data
 
+---
+
 ## Configuration
 
 Edit `config/targets.yaml` to define tracked assets:
@@ -90,6 +134,8 @@ assets:
     news_queries: ["bitcoin", "crypto"]
 ```
 
+---
+
 ## Sentiment Analysis
 
 Uses **FinBERT** (ProsusAI/finbert) exported to ONNX with dynamic quantisation for CPU inference. Each batch of 32 texts processes in ~50ms.
@@ -98,7 +144,9 @@ Uses **FinBERT** (ProsusAI/finbert) exported to ONNX with dynamic quantisation f
 1. Lowercase normalisation
 2. URL / mention / ticker removal
 3. Whitespace cleanup
-4. LRU cache (10 000 entries)
+4. LRU cache (10,000 entries)
+
+---
 
 ## Fear & Greed Index
 
@@ -110,11 +158,15 @@ Three weighted components:
 | Price momentum (5 min Δ) | 30% | 0–100 |
 | Sentiment velocity | 20% | 0–100 |
 
+---
+
 ## Signal Strategies
 
 1. **Contrarian Buy** — F&G < 20 + sentiment recovering → BUY (75% confidence)
 2. **Contrarian Sell** — F&G > 85 + price dipping → SELL (80% confidence)
 3. **Trend Follow** — F&G > 70 + strong sentiment + rising price → BUY (60% confidence)
+
+---
 
 ## Project Structure
 
@@ -132,21 +184,34 @@ src/sentivo/
 └── sentiment_analysis/        # FinBERT ONNX, preprocessor, test texts
 ```
 
+---
 
 ## Performance
 
-- **Throughput**: 1 000+ messages/min across all Kafka topics
+- **Throughput**: 1,000+ messages/min across all Kafka topics
 - **Sentiment latency**: <100 ms per batch of 32 texts (ONNX CPU)
 - **Signal latency**: <500 ms from data ingestion to final signal
 - **Memory**: ~2 GB with loaded FinBERT model
 - **CPU**: ~40% on 4-core system at peak load
 
+---
+
 ## Methodology
 
 The Fear & Greed Index combines behavioural finance principles with real-time NLP:
 
-1. **Sentiment score** (50 %) — 5-minute rolling average of FinBERT scores normalised to 0–100
-2. **Price momentum** (30 %) — 5-minute percent change capped at ±5 %
-3. **Sentiment velocity** (20 %) — rate of change in 1-minute sentiment averages
+1. **Sentiment score** (50%) — 5-minute rolling average of FinBERT scores normalised to 0–100
+2. **Price momentum** (30%) — 5-minute percent change capped at ±5%
+3. **Sentiment velocity** (20%) — rate of change in 1-minute sentiment averages
 
 Signals are generated when threshold combinations indicate statistically significant market conditions, inspired by classic behavioural finance literature (Shiller, Kahneman & Tversky).
+
+---
+
+## License
+
+MIT
+
+---
+
+Built by [Nirav Sayanja](https://github.com/N-S8990)
