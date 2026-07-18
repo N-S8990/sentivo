@@ -1,12 +1,16 @@
-# Sentivo — Market Sentiment & Pulse Engine
+![Sentivo Banner](https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:1A7F37&height=220&section=header&text=Sentivo&fontSize=50&fontAlignY=32&desc=Market%20Sentiment%20%26%20Pulse%20Engine&descAlignY=52&fontColor=ffffff)
 
-![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
-![Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?logo=apachekafka&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
-![FinBERT](https://img.shields.io/badge/FinBERT-ONNX-FF6B35?logo=huggingface&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green)
+<div align="center">
 
-> Real-time sentiment analysis and signal generation engine that aggregates social media, news, and market data into actionable Fear & Greed scores and trade signals.
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?logo=apachekafka&logoColor=white)](https://kafka.apache.org/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![FinBERT](https://img.shields.io/badge/FinBERT-ONNX-FF6B35?logo=huggingface&logoColor=white)](https://huggingface.co/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
+Real-time sentiment analysis and signal generation engine that aggregates social media, news, and market data into actionable Fear & Greed scores and trade signals.
+
+</div>
 
 ---
 
@@ -214,4 +218,10 @@ MIT
 
 ---
 
-Built by [Nirav Sayanja](https://github.com/N-S8990)
+<div align="center">
+
+**Built by [Nirav Sayanja](https://github.com/N-S8990)** · NIT Rourkela
+
+</div>
+
+![footer](https://capsule-render.vercel.app/api?type=waving&color=0:1A7F37,100:0D1117&height=120&section=footer)
