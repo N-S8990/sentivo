@@ -1,4 +1,4 @@
-![Sentivo Banner](https://capsule-render.vercel.app/api?type=waving&color=0:1C1C1C,100:DC2626&height=220&section=header&text=Sentivo&fontSize=50&fontAlignY=32&desc=Market%20Sentiment%20\&%Pulse%20%Engine%20%E2%80%94%20Full%20Stack%20ML%20System&descAlignY=52&fontColor=ffffff)
+![Sentivo Banner](https://capsule-render.vercel.app/api?type=waving&color=0:1C1C1C,100:DC2626&height=220&section=header&text=Sentivo&fontSize=50&fontAlignY=32&desc=Market%20Sentiment%20And%Pulse%20%Engine%20%E2%80%94%20Full%20Stack%20ML%20System&descAlignY=52&fontColor=ffffff)
 
 
 # Sentivo
