@@ -224,6 +224,5 @@ MIT
 
 **Built by [Nirav Sayanja](https://github.com/N-S8990)** · NIT Rourkela
 
-<img src="assets/footer.png" alt="Sentivo Footer" width="100%">
 
 </div>
