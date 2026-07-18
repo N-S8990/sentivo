@@ -1,6 +1,8 @@
-![Sentivo Banner](https://capsule-render.vercel.app/api?type=waving&color=0:7F1D1D,100:EF4444&height=220&section=header&text=Sentivo&fontSize=50&fontAlignY=32&desc=Market%20Sentiment%20%26%20Pulse%20Engine&descAlignY=52&fontColor=ffffff)
-
 <div align="center">
+
+# Sentivo
+
+### Market Sentiment & Pulse Engine
 
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?logo=apachekafka&logoColor=white)](https://kafka.apache.org/)
@@ -223,5 +225,3 @@ MIT
 **Built by [Nirav Sayanja](https://github.com/N-S8990)** · NIT Rourkela
 
 </div>
-
-![footer](https://capsule-render.vercel.app/api?type=waving&color=0:EF4444,100:7F1D1D&height=120&section=footer)
