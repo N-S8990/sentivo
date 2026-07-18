@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="Sentivo Banner" width="100%">
+<img src="assets/banner.png" alt="Sentivo Banner" width="100%">
 
 # Sentivo
 
@@ -226,6 +226,6 @@ MIT
 
 **Built by [Nirav Sayanja](https://github.com/N-S8990)** · NIT Rourkela
 
-<img src="assets/footer.svg" alt="Sentivo Footer" width="100%">
+<img src="assets/footer.png" alt="Sentivo Footer" width="100%">
 
 </div>
