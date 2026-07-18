@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/banner.svg" alt="Sentivo Banner" width="100%">
+
 # Sentivo
 
 ### Market Sentiment & Pulse Engine
@@ -223,5 +225,7 @@ MIT
 <div align="center">
 
 **Built by [Nirav Sayanja](https://github.com/N-S8990)** · NIT Rourkela
+
+<img src="assets/footer.svg" alt="Sentivo Footer" width="100%">
 
 </div>
