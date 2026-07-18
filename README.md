@@ -1,4 +1,4 @@
-![Sentivo Banner](https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:1A7F37&height=220&section=header&text=Sentivo&fontSize=50&fontAlignY=32&desc=Market%20Sentiment%20%26%20Pulse%20Engine&descAlignY=52&fontColor=ffffff)
+![Sentivo Banner](https://capsule-render.vercel.app/api?type=waving&color=0:7F1D1D,100:EF4444&height=220&section=header&text=Sentivo&fontSize=50&fontAlignY=32&desc=Market%20Sentiment%20%26%20Pulse%20Engine&descAlignY=52&fontColor=ffffff)
 
 <div align="center">
 
@@ -224,4 +224,4 @@ MIT
 
 </div>
 
-![footer](https://capsule-render.vercel.app/api?type=waving&color=0:1A7F37,100:0D1117&height=120&section=footer)
+![footer](https://capsule-render.vercel.app/api?type=waving&color=0:EF4444,100:7F1D1D&height=120&section=footer)
